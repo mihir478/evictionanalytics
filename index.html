@@ -4,6 +4,7 @@
     <title>Homeless Analytics</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
+    <link rel="stylesheet" src="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <style>
         html, body {
             height: 100%;
@@ -11,22 +12,95 @@
             padding: 0;
         }
         #map {
-            height: 100%;
+            width: 600px;
+            height: 600px;
+            margin: auto;
+        }
+        .title {
+            margin-left: 40px;
+            font-size: 18px;
+            color: red;
+            font-family: 'Font Awesome', sans-serif;
         }
     </style>
 </head>
 <body>
+<div class="title">&nbsp;</div>
+<div class="title" id="neighborhood"></div>
 <div id="map"></div>
 <script>
-    var map;
+    var map, prevArea = null;
+
+    function setPolygons(i) {
+
+        var paths = [];
+        var neighborhoods = ['Greater Heights', 'Second Ward', 'Sharpstown', 'Downtown', 'Sunnyside'];
+
+        paths[0] = [
+            {lat: 29.808873, lng: -95.439950},
+            {lat: 29.813341, lng: -95.376950},
+            {lat: 29.777142, lng: -95.368539},
+            {lat: 29.779824, lng: -95.409566}
+        ];
+
+        paths[1] = [
+            {lat: 29.766385, lng:-95.347160},
+            {lat: 29.754239, lng:-95.303215},
+            {lat: 29.737398, lng:-95.314287},
+            {lat: 29.747831, lng:-95.345787}
+        ];
+
+        paths[2] = [
+            {lat: 29.717332, lng:-95.555885},
+            {lat: 29.722848, lng:-95.493228},
+            {lat: 29.695265, lng:-95.493743},
+            {lat: 29.681993, lng:-95.536830}
+        ];
+
+        paths[3] = [
+            {lat: 29.770267, lng:-95.365282},
+            {lat: 29.769746, lng:-95.342022},
+            {lat: 29.746186, lng:-95.363437},
+            {lat: 29.752310, lng:-95.374723}
+        ];
+
+        paths[4] = [
+            {lat: 29.680039, lng: -95.380992},
+            {lat: 29.675900, lng: -95.345287},
+            {lat: 29.647223, lng: -95.343227},
+            {lat: 29.632005, lng: -95.386314}
+        ];
+
+        var area = new google.maps.Polygon({
+            paths: paths[i % 5],
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.7,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35
+        });
+
+        if(prevArea) {
+            prevArea.setMap(null);
+        }
+        prevArea = area;
+
+        area.setMap(map);
+        document.getElementById('neighborhood').innerHTML = 'Super Neighborhood: ' + neighborhoods[i % 5];
+    }
+
     function initMap() {
+        var i = 0;
         map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 29.7604, lng: -95.3698},
             zoom: 10
         });
+        setInterval(function() {
+            setPolygons(i++);
+        }, 1000);
     }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWn05Uo-58AiPAAl2dpsidBRpw0wUTjCU&callback=initMap"R
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWn05Uo-58AiPAAl2dpsidBRpw0wUTjCU&callback=initMap"
         async defer></script>
 </body>
 </html>
