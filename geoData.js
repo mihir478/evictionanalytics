@@ -1290,3 +1290,426 @@ var zips = [
     "numberofevictions": 1
   }
 ];
+
+var stats = [
+  {
+    "zip": 77002,
+    "houseVal": 208600,
+    "propTax": 3712
+  },
+  {
+    "zip": 77003,
+    "houseVal": 162600,
+    "propTax": 3470
+  },
+  {
+    "zip": 77004,
+    "houseVal": 191700,
+    "propTax": 3160
+  },
+  {
+    "zip": 77005,
+    "houseVal": 754000,
+    "propTax": 10001
+  },
+  {
+    "zip": 77006,
+    "houseVal": 327300,
+    "propTax": 6063
+  },
+  {
+    "zip": 77007,
+    "houseVal": 308700,
+    "propTax": 6237
+  },
+  {
+    "zip": 77008,
+    "houseVal": 292200,
+    "propTax": 5270
+  },
+  {
+    "zip": 77009,
+    "houseVal": 163000,
+    "propTax": 2894
+  },
+  {
+    "zip": 77011,
+    "houseVal": 80300,
+    "propTax": 1197
+  },
+  {
+    "zip": 77012,
+    "houseVal": 82600,
+    "propTax": 1444
+  },
+  {
+    "zip": 77013,
+    "houseVal": 84900,
+    "propTax": 1653
+  },
+  {
+    "zip": 77014,
+    "houseVal": 119300,
+    "propTax": 3501
+  },
+  {
+    "zip": 77016,
+    "houseVal": 63700,
+    "propTax": 1062
+  },
+  {
+    "zip": 77017,
+    "houseVal": 86400,
+    "propTax": 1590
+  },
+  {
+    "zip": 77018,
+    "houseVal": 218400,
+    "propTax": 3575
+  },
+  {
+    "zip": 77019,
+    "houseVal": 378700,
+    "propTax": 6643
+  },
+  {
+    "zip": 77020,
+    "houseVal": 70500,
+    "propTax": 1237
+  },
+  {
+    "zip": 77021,
+    "houseVal": 83900,
+    "propTax": 1693
+  },
+  {
+    "zip": 77022,
+    "houseVal": 81700,
+    "propTax": 1412
+  },
+  {
+    "zip": 77023,
+    "houseVal": 102700,
+    "propTax": 1750
+  },
+  {
+    "zip": 77025,
+    "houseVal": 331200,
+    "propTax": 5601
+  },
+  {
+    "zip": 77026,
+    "houseVal": 59600,
+    "propTax": 860
+  },
+  {
+    "zip": 77027,
+    "houseVal": 475900,
+    "propTax": 8352
+  },
+  {
+    "zip": 77028,
+    "houseVal": 59100,
+    "propTax": 1086
+  },
+  {
+    "zip": 77030,
+    "houseVal": 501100,
+    "propTax": 7843
+  },
+  {
+    "zip": 77031,
+    "houseVal": 114900,
+    "propTax": 2319
+  },
+  {
+    "zip": 77033,
+    "houseVal": 65600,
+    "propTax": 963
+  },
+  {
+    "zip": 77034,
+    "houseVal": 99700,
+    "propTax": 2385
+  },
+  {
+    "zip": 77035,
+    "houseVal": 156300,
+    "propTax": 2493
+  },
+  {
+    "zip": 77036,
+    "houseVal": 113900,
+    "propTax": 1957
+  },
+  {
+    "zip": 77038,
+    "houseVal": 86300,
+    "propTax": 2208
+  },
+  {
+    "zip": 77040,
+    "houseVal": 121700,
+    "propTax": 2714
+  },
+  {
+    "zip": 77041,
+    "houseVal": 137200,
+    "propTax": 3533
+  },
+  {
+    "zip": 77042,
+    "houseVal": 211900,
+    "propTax": 3322
+  },
+  {
+    "zip": 77043,
+    "houseVal": 140800,
+    "propTax": 2379
+  },
+  {
+    "zip": 77045,
+    "houseVal": 85500,
+    "propTax": 1491
+  },
+  {
+    "zip": 77046,
+    "houseVal": 295000,
+    "propTax": 4066
+  },
+  {
+    "zip": 77047,
+    "houseVal": 103400,
+    "propTax": 1942
+  },
+  {
+    "zip": 77048,
+    "houseVal": 81200,
+    "propTax": 1407
+  },
+  {
+    "zip": 77050,
+    "houseVal": 73100,
+    "propTax": 1168
+  },
+  {
+    "zip": 77051,
+    "houseVal": 58800,
+    "propTax": 1101
+  },
+  {
+    "zip": 77053,
+    "houseVal": 85800,
+    "propTax": 1656
+  },
+  {
+    "zip": 77054,
+    "houseVal": 119300,
+    "propTax": 2608
+  },
+  {
+    "zip": 77056,
+    "houseVal": 555700,
+    "propTax": 8913
+  },
+  {
+    "zip": 77057,
+    "houseVal": 224900,
+    "propTax": 4091
+  },
+  {
+    "zip": 77058,
+    "houseVal": 158400,
+    "propTax": 2956
+  },
+  {
+    "zip": 77059,
+    "houseVal": 243300,
+    "propTax": 5821
+  },
+  {
+    "zip": 77061,
+    "houseVal": 113800,
+    "propTax": 2079
+  },
+  {
+    "zip": 77062,
+    "houseVal": 160100,
+    "propTax": 3690
+  },
+  {
+    "zip": 77063,
+    "houseVal": 176600,
+    "propTax": 3054
+  },
+  {
+    "zip": 77064,
+    "houseVal": 133300,
+    "propTax": 3182
+  },
+  {
+    "zip": 77065,
+    "houseVal": 140600,
+    "propTax": 3041
+  },
+  {
+    "zip": 77066,
+    "houseVal": 114800,
+    "propTax": 3037
+  },
+  {
+    "zip": 77067,
+    "houseVal": 94700,
+    "propTax": 2719
+  },
+  {
+    "zip": 77068,
+    "houseVal": 165200,
+    "propTax": 3713
+  },
+  {
+    "zip": 77069,
+    "houseVal": 206000,
+    "propTax": 3573
+  },
+  {
+    "zip": 77070,
+    "houseVal": 154500,
+    "propTax": 3207
+  },
+  {
+    "zip": 77071,
+    "houseVal": 117500,
+    "propTax": 2360
+  },
+  {
+    "zip": 77072,
+    "houseVal": 94100,
+    "propTax": 2026
+  },
+  {
+    "zip": 77073,
+    "houseVal": 108300,
+    "propTax": 2812
+  },
+  {
+    "zip": 77074,
+    "houseVal": 104800,
+    "propTax": 1894
+  },
+  {
+    "zip": 77075,
+    "houseVal": 114600,
+    "propTax": 2664
+  },
+  {
+    "zip": 77076,
+    "houseVal": 86500,
+    "propTax": 1675
+  },
+  {
+    "zip": 77077,
+    "houseVal": 208900,
+    "propTax": 3816
+  },
+  {
+    "zip": 77078,
+    "houseVal": 70700,
+    "propTax": 1051
+  },
+  {
+    "zip": 77079,
+    "houseVal": 326400,
+    "propTax": 5022
+  },
+  {
+    "zip": 77080,
+    "houseVal": 130600,
+    "propTax": 2219
+  },
+  {
+    "zip": 77081,
+    "houseVal": 217100,
+    "propTax": 4063
+  },
+  {
+    "zip": 77082,
+    "houseVal": 124000,
+    "propTax": 3268
+  },
+  {
+    "zip": 77083,
+    "houseVal": 124300,
+    "propTax": 3081
+  },
+  {
+    "zip": 77085,
+    "houseVal": 106600,
+    "propTax": 1997
+  },
+  {
+    "zip": 77086,
+    "houseVal": 93500,
+    "propTax": 2414
+  },
+  {
+    "zip": 77087,
+    "houseVal": 84800,
+    "propTax": 1511
+  },
+  {
+    "zip": 77088,
+    "houseVal": 93400,
+    "propTax": 2083
+  },
+  {
+    "zip": 77090,
+    "houseVal": 138800,
+    "propTax": 3052
+  },
+  {
+    "zip": 77091,
+    "houseVal": 95300,
+    "propTax": 1758
+  },
+  {
+    "zip": 77092,
+    "houseVal": 130200,
+    "propTax": 2143
+  },
+  {
+    "zip": 77093,
+    "houseVal": 75200,
+    "propTax": 1269
+  },
+  {
+    "zip": 77094,
+    "houseVal": 295200,
+    "propTax": 6784
+  },
+  {
+    "zip": 77095,
+    "houseVal": 167000,
+    "propTax": 4016
+  },
+  {
+    "zip": 77096,
+    "houseVal": 255900,
+    "propTax": 4238
+  },
+  {
+    "zip": 77098,
+    "houseVal": 424200,
+    "propTax": 6937
+  },
+  {
+    "zip": 77099,
+    "houseVal": 96300,
+    "propTax": 2197
+  },
+  {
+    "zip": 77201,
+    "houseVal": 352263,
+    "propTax": 4358
+  }
+];
