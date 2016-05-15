@@ -13,7 +13,7 @@
             padding: 0;
         }
         #map {
-            width: 600px;
+            width: 900px;
             height: 600px;
             margin: auto;
         }
@@ -32,11 +32,33 @@
 <script>
     var map;
 
+    function lookup(zip) {
+        for(var i = 0 ; i < evictions.length; ++i) {
+            if(evictions[i]["DefendantAddressZIP1"] === zip) {
+                return evictions[i]["numberofevictions"];
+            }
+        }
+        return -1;
+    }
+
+    function maxE() {
+        var max = 0;
+        for(var i = 0 ; i < evictions.length; ++i) {
+            max = Math.max(evictions[i]["numberofevictions"], max);
+        }
+        return max;
+    }
+
     function setPolygons() {
+
+        var max = maxE();
 
         for(var i = 0; i < geoJson.features.length; ++i) {
             var coords = geoJson.features[i].geometry.coordinates[0];
+
             coords.zip = zips[i];
+            coords.evictions = lookup(coords.zip);
+
             var latlng = [];
             for(var j = 0; j < coords.length; ++j) {
                 if(!isNaN(coords[j][1]) && !isNaN(coords[j][0])) {
@@ -45,11 +67,11 @@
             }
             var area = new google.maps.Polygon({
                 paths: latlng,
-                strokeColor: '#FF0000',
+                fillColor: coords.evictions >= 0 ? '#FF0000' : '#232323',
                 strokeOpacity: 0.7,
-                strokeWeight: 2,
-                fillColor: '#FF0000',
-                fillOpacity: 0.35
+                strokeWeight: 0,
+                strokeColor: '#FF0000',
+                fillOpacity: 0.7 * coords.evictions / max + 0.2
             });
             area.setMap(map);
         }
